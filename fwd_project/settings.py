@@ -26,7 +26,10 @@ SECRET_KEY = 'n(2an&ki!_vhycgw(_fa+#j0v^v2*0g$9$plf73%37it&t!d5u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "fwd-django.herokuapp.com",
+    "firstworlddelivery.com"
+]
 
 
 # Application definition
