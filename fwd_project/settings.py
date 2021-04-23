@@ -29,7 +29,8 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "localhost",
     "fwd-django.herokuapp.com",
-    "firstworlddelivery.com"
+    "firstworlddelivery.com",
+    "www.firstworlddelivery.com"
 ]
 
 
