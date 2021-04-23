@@ -1,0 +1,150 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipment Receipt</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        body {
+            /* background-color: #eec; */
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* .container {
+            width: 60%;
+            margin: 2rem auto;
+            background: url('{% static "https://toppng.com/uploads/preview/paid-stamp-11523437479mrzjbiqzwz.png" %');
+            background-size: 5%;
+            background-repeat: repeat-x;
+            padding: 5rem 0;
+        } */
+
+        /* #logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #logo img {
+            margin-bottom: 3rem;
+            width: 25%;
+        }
+
+        #logo h1 {
+            font-size: 2rem;
+            border-bottom: 1px solid #7ac;
+            display: inline-block;
+        }
+
+        .transaction_details {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .transaction_details .details {
+            width: 30vw;
+            margin-right: 5rem;
+            text-align: center;
+            padding: 5rem 0;
+        }
+
+        .details h3 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .details p, .details p strong {
+            font-size: 1.2rem;
+            margin-bottom: .75rem;
+        }
+
+        .shipment_status {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .shipment_status h3 {
+            font-size: 1.35rem;
+        }
+
+        .shipment {
+            border-bottom: 1px solid #000;
+            padding: .57rem 0;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="logo">
+            <img src="https://dvl-logistics.com/img/logo.png" alt="" id="logo-img">
+            <h1>Shipment Receipt</h1>
+        </div>
+
+        <div class="transaction_details">
+            <div class="details sender-info">
+                <h3>Sender Details</h3>
+                
+                  {% if shipment %}
+                     <p>
+                        <strong>Name:</strong> {{ shipment.sender_name }}
+                     </p>
+                     <p>
+                        <strong>Address:</strong> {{ shipment.sender_address }}
+                     </p>
+                     <p>
+                        <strong>City:</strong> {{ shipment.sender_city }}
+                     </p>
+                     <p>
+                        <strong>State:</strong> {{ shipment.sender_state }}
+                     </p>
+                     <p>
+                        <strong>Country:</strong> {{ shipment.sender_country }}
+                     </p>
+                  {% endif %}
+            </div>
+            <hr>
+            <div class="details receiver-info">
+                <h3>Receiver Details</h3>
+                  {% if shipment %}
+                     <p>
+                        <strong>Name:</strong> {{ shipment.receiver_name }}
+                     </p>
+                     <p>
+                        <strong>Address:</strong> {{ shipment.receiver_address }}
+                     </p>
+                     <p>
+                        <strong>City:</strong> {{ shipment.receiver_city }}
+                     </p>
+                     <p>
+                        <strong>State:</strong> {{ shipment.receiver_state }}
+                     </p>
+                     <p>
+                        <strong>Country:</strong> {{ shipment.receiver_country }}
+                     </p>
+                  {% endif %}
+            </div>
+            <div id="paid" style="text-align: center;">
+               <img src="https://toppng.com/uploads/preview/paid-stamp-11523437479mrzjbiqzwz.png" alt="" id="shipment-receipt" width="50" height="50">
+               <img src="https://toppng.com/uploads/preview/paid-stamp-11523437479mrzjbiqzwz.png" alt="" id="shipment-receipt" width="50" height="50">
+               <img src="https://toppng.com/uploads/preview/paid-stamp-11523437479mrzjbiqzwz.png" alt="" id="shipment-receipt" width="50" height="50">
+               <img src="https://toppng.com/uploads/preview/paid-stamp-11523437479mrzjbiqzwz.png" alt="" id="shipment-receipt" width="50" height="50">
+               <img src="https://toppng.com/uploads/preview/paid-stamp-11523437479mrzjbiqzwz.png" alt="" id="shipment-receipt" width="50" height="50">
+               <img src="https://toppng.com/uploads/preview/paid-stamp-11523437479mrzjbiqzwz.png" alt="" id="shipment-receipt" width="50" height="50">
+            </div>   
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="middle">
+    <div class="container">
+        <div class="tbl">
+            <div class="tbl-cell"><img class="slogan" src="{% static 'img/slogan.png' %}" alt="real.smart.logistics." alt="one connection, multiple solutions">
+                <br><a class="btn regular" href="{% url 'contact' %}">Request a quote</a></div>
+        </div>
+    </div>
+</div>
+<div class="bottom">
+    <div class="container">
+        <div class="row display">
+            <div class="col">
+                <div class="item"><span class="icon truck"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="100.000000pt" height="100.000000pt" viewBox="0 0 100.000000 100.000000" preserveAspectRatio="xMidYMid meet"><g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none"><path d="M361 902 c-24 -23 -30 -42 -40 -112 -14 -98 -10 -611 5 -675 9 -40 9
+                            -40 62 -43 47 -3 54 -1 59 17 5 20 12 21 169 21 157 0 164 -1 164 -20 0 -18 7
+                            -20 55 -20 53 0 55 1 55 28 1 15 7 38 15 52 26 46 14 638 -14 713 -6 14 -20
+                            35 -32 46 -22 20 -33 21 -247 21 l-224 0 -27 -28z m483 -173 c3 -17 6 -54 6
+                            -81 0 -47 -2 -50 -35 -64 -25 -10 -78 -14 -197 -14 -163 0 -232 9 -241 33 -2
+                            7 -2 45 1 85 l5 72 227 0 228 0 6 -31z m-47 -295 c2 -6 -10 -25 -26 -43 l-29
+                            -31 -131 0 c-130 0 -132 0 -156 26 -14 15 -25 35 -25 46 0 17 10 18 182 16
+                            121 -2 183 -7 185 -14z"/><path d="M254 891 c-16 -10 -80 -81 -142 -158 l-112 -141 0 -157 0 -157 28 7
+                            c15 3 74 20 132 38 l105 33 3 102 c3 102 3 102 -21 102 -45 0 -60 31 -52 107
+                            7 72 17 93 52 111 15 9 25 28 33 68 7 30 10 57 8 59 -2 3 -17 -4 -34 -14z"/><path d="M200 300 c-30 -11 -88 -29 -127 -40 l-73 -22 0 -39 c0 -26 5 -42 15
+                            -45 8 -4 15 -17 15 -29 0 -49 8 -55 75 -55 l63 0 12 35 c6 19 18 35 26 35 8 0
+                            14 9 14 20 0 13 7 20 20 20 18 0 20 7 20 70 0 39 -1 70 -2 69 -2 0 -28 -9 -58
+                            -19z"/></g></svg></span>
+                    <h3 class="heading">Truckload</h3>
+                    <p class="description">Shipping via trucks</p><a class="btn small" href="{% url 'truckloads' %}">Learn More</a></div>
+            </div>
+            <div class="col">
+                <div class="item"><span class="icon truck"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="100.000000pt" height="100.000000pt" viewBox="0 0 100.000000 100.000000" preserveAspectRatio="xMidYMid meet"><g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none"><path d="M378 831 c-127 -54 -128 -56 -128 -165 l0 -91 -98 -41 -97 -41 0
+                            -129 0 -129 100 -52 c55 -29 112 -52 128 -53 15 0 69 21 119 46 l92 46 93 -46
+                            c55 -27 107 -46 126 -46 19 1 73 22 132 53 l100 52 0 125 0 125 -35 18 c-19 9
+                            -65 31 -102 47 l-68 29 0 94 c0 64 -4 98 -12 105 -28 23 -203 92 -232 91 -17
+                            0 -70 -17 -118 -38z m153 -35 c19 -8 57 -24 84 -36 l50 -21 -84 -35 -83 -35
+                            -77 32 c-42 17 -78 33 -80 35 -4 4 136 72 150 73 4 1 22 -5 40 -13z m-168
+                            -309 c73 -32 75 -33 49 -44 -15 -6 -50 -20 -78 -31 l-50 -20 -74 31 -75 31 70
+                            32 c39 18 73 33 76 33 3 1 40 -14 82 -32z m429 -3 c38 -15 67 -28 65 -30 -1
+                            -1 -34 -16 -74 -32 l-72 -31 -76 31 c-42 17 -74 32 -72 34 10 10 143 62 152
+                            59 6 -1 40 -15 77 -31z m-332 -151 l0 -58 -65 -32 c-36 -18 -68 -33 -70 -33
+                            -3 0 -5 28 -5 63 l0 62 63 27 c34 14 65 27 70 27 4 1 7 -25 7 -56z m430 2 l0
+                            -55 -70 -35 c-38 -19 -72 -35 -75 -35 -3 0 -5 27 -5 60 l0 61 63 29 c86 40 87
+                            39 87 -25z"/></g></svg></span>
+                    <h3 class="heading">LTL</h3>
+                    <p class="description">Less than Truckload</p><a class="btn small" href="{% url 'ltl' %}">Learn More</a></div>
+            </div>
+            <div class="col">
+                <div class="item"><span class="icon intermodal"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="239.000000pt" height="224.000000pt" viewBox="0 0 239.000000 224.000000" preserveAspectRatio="xMidYMid meet"><g transform="translate(0.000000,224.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none"><path d="M1077 2205 l-249 -33 -205 -211 c-239 -246 -328 -317 -500 -398
+                            l-123 -58 0 -235 0 -236 68 -33 c169 -84 310 -190 513 -388 138 -135 161 -153
+                            190 -153 39 0 61 -22 276 -277 l145 -173 96 0 95 0 -21 23 c-12 13 -22 26 -22
+                            30 0 4 143 8 317 9 l316 3 -55 42 -55 43 -306 0 -306 0 -21 30 -21 30 288 0
+                            288 1 -45 39 -45 39 -281 1 -282 0 -26 35 -27 35 289 0 289 0 244 -180 243
+                            -180 113 0 c62 0 113 2 113 4 0 2 -130 100 -289 217 -306 227 -305 225 -210
+                            228 30 1 56 16 140 82 57 44 108 90 112 101 4 12 6 234 5 492 l-3 471 -26 56
+                            c-28 60 -94 130 -140 149 l-28 12 -3 163 c-2 101 -7 168 -14 175 -11 11 -513
+                            81 -563 79 -14 -1 -138 -16 -274 -34z m223 -160 c0 -46 -5 -76 -12 -82 -15
+                            -11 -357 -55 -370 -47 -4 3 -8 39 -8 80 0 57 3 76 15 80 24 10 349 50 363 46
+                            8 -3 12 -28 12 -77z m510 30 c12 -8 13 -152 1 -159 -4 -3 -90 5 -190 18 -127
+                            16 -185 27 -192 37 -12 19 -11 133 1 145 10 10 358 -28 380 -41z m-1010 -135
+                            l0 -69 -92 -70 -93 -70 -3 56 -3 56 83 84 c45 46 88 83 95 83 9 0 13 -20 13
+                            -70z m727 -289 c134 -97 56 -304 -110 -288 -83 8 -138 64 -145 149 -3 44 0 59
+                            20 88 58 85 158 107 235 51z m-418 -847 c26 -21 31 -33 31 -69 0 -36 -5 -48
+                            -31 -69 -19 -17 -43 -26 -64 -26 -21 0 -45 9 -64 26 -26 21 -31 33 -31 69 0
+                            36 5 48 31 69 19 17 43 26 64 26 21 0 45 -9 64 -26z m776 2 c32 -32 40 -69 25
+                            -107 -17 -39 -46 -59 -90 -59 -44 0 -73 20 -90 59 -26 64 20 131 90 131 30 0
+                            47 -6 65 -24z"/></g></svg></span>
+                    <h3 class="heading">Intermodal</h3>
+                    <p class="description">Freight transport</p><a class="btn small" href="{% url 'intermodal' %}">Learn More</a></div>
+            </div>
+            <div class="col">
+                <div class="item"><span class="icon air"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="100.000000pt" height="100.000000pt" viewBox="0 0 100.000000 100.000000" preserveAspectRatio="xMidYMid meet"><g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none"><path d="M770 796 c-30 -12 -163 -71 -295 -131 -132 -59 -254 -113 -271 -121
+                            -30 -13 -34 -12 -75 20 -62 46 -87 58 -109 51 -11 -4 -20 -15 -20 -25 0 -27
+                            73 -182 93 -199 38 -31 186 -1 345 70 34 16 62 27 62 26 0 -1 -11 -60 -25
+                            -132 -37 -190 -35 -201 25 -170 30 16 38 31 174 320 l38 80 96 47 c200 98 228
+                            129 152 168 -52 27 -121 25 -190 -4z"/><path d="M212 768 c-12 -6 -21 -16 -19 -21 2 -6 38 -32 81 -59 l77 -48 75 32
+                            c41 18 74 35 74 39 0 11 -196 69 -231 68 -19 0 -44 -5 -57 -11z"/></g></svg></span>
+                    <h3 class="heading">Air</h3>
+                    <p class="description">Shipping via air</p><a class="btn small" href="{% url 'air' %}">Learn More</a></div>
+            </div>
+            <div class="col">
+                <div class="item"><span class="icon ocean"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="100.000000pt" height="100.000000pt" viewBox="0 0 100.000000 100.000000" preserveAspectRatio="xMidYMid meet"><g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none"><path d="M346 978 c-9 -12 -16 -32 -16 -44 0 -28 47 -66 71 -59 9 3 20 1 24
+                            -5 3 -5 13 -10 22 -10 9 0 22 -8 29 -17 12 -17 14 -17 35 4 21 20 21 24 8 40
+                            -8 10 -20 30 -27 46 -6 15 -18 27 -26 27 -9 0 -20 9 -26 20 -15 29 -74 27 -94
+                            -2z"/><path d="M450 788 c0 -18 -3 -44 -7 -57 -5 -20 -11 -22 -38 -18 -22 4 -34 0
+                            -42 -11 -22 -37 -7 -42 142 -42 123 0 144 2 149 16 10 27 -11 43 -49 37 l-33
+                            -5 -7 56 -7 56 -54 0 -54 0 0 -32z"/><path d="M254 637 c-3 -8 -3 -55 -2 -105 l3 -92 125 61 124 60 127 -60 c70
+                            -34 130 -61 133 -61 12 0 6 186 -6 198 -18 18 -497 17 -504 -1z"/><path d="M315 454 c-93 -46 -174 -85 -180 -87 -6 -2 -6 -17 2 -43 23 -77 94
+                            -279 101 -286 4 -4 37 2 72 13 51 16 82 20 140 16 86 -6 89 -7 189 -41 120
+                            -42 121 -41 156 61 16 48 30 92 31 98 1 5 14 41 28 79 14 37 26 76 26 85 0 11
+                            -55 43 -181 104 -100 48 -189 87 -198 86 -9 0 -92 -38 -186 -85z"/></g></svg></span>
+                    <h3 class="heading">Ocean</h3>
+                    <p class="description">Container shipping</p><a class="btn small" href="{% url 'ocean' %}">Learn More</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-cover"></div>
+</div>
+<div id="intro">
+<div class="container display">
+    <h3 class="heading">WE’RE THE ONE</h3>
+    <p>Navigating complex shipping logistics presents its challenges. To keep your goods on the move, an experienced and reliable freight forwarding partner can help make the informed decisions that ensure your success from pick up to delivery.</p>
+    <p>At First World Delivery, we offer a wide variety of domestic supply chain solutions geared to our clients’ needs. From securing the right equipment for your freight to networking with top-notch carriers to expedite deliveries, we provide one point of contact you can rely on. With personal service supported by the most innovative technology, we’ll respond quickly and effectively to keep your goods safe and on schedule to arrive at their destinations.</p>
+    <p>Plus, because we know numbers also count, we’re happy to extend flexible rate and service solutions that make sense for your business.</p>
+    <p>We’re confident we have a solution for you. Contact us today and let’s roll.</p>
+</div>
+</div>
+<div id="capabilities">
+<div class="container display">
+    <div class="row">
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="item start">
+                <h4 class="heading">THE POWER OF ONE CONNECTION</h4>
+                <p class="description">Let us guide you forward on the road to success.</p>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="item"><span class="icon tracking"></span>
+                <h4 class="heading">Tracking</h4>
+                <p class="description">Monitor your valuable shipments with tracking updates customized to your preferences.</p>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="item"><span class="icon support"></span>
+                <h4 class="heading">Support</h4>
+                <p class="description">Count on our support 24/7 to answer questions, get a quote or to help you find the right equipment for your freight from our network of reliable regional and national connections.</p>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="item"><span class="icon loyalty"></span>
+                <h4 class="heading">Loyalty</h4>
+                <p class="description">Our long-lasting relationships with quality carriers help us secure equipment in diverse capacities and provide the consistent service you can rely on.</p>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="item"><span class="icon communication"></span>
+                <h4 class="heading">Communication</h4>
+                <p class="description">Contact us whenever it’s convenient for you and by whatever platform you choose to communicate - phone, email or text messaging.</p>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="item"><span class="icon capacity"></span>
+                <h4 class="heading">Capacity</h4>
+                <p class="description">We take time to select quality carriers and create long lasting relationship, which help us secure capacity and provide the service that you expect.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div id="summary">
+<div class="container display">
+    <h3 class="heading">WE'RE IN IT FOR THE LONG HAUL</h3>
+    <p>Whether shipping by land, air or ocean, we are committed to providing visibility, communication and tracking for a variety of products, including consumer goods, paper and packaging, time and temperature-sensitive food and beverage deliveries and more.
+        <br />
+        <br />At First World Delivery, our mission is to offer the best service in the logistics industry so that you can ship the world with confidence. Our logistics experts are anxious to learn about your business and explore ways to simplify your supply chain management and save you money in the process. Call us today. In just a few minutes, you'll discover a new world of opportunities.</p>
+    <br />
+    <h4 class="heading"><a href="{% url 'contact' %}">Contact Us Now</a></h4>
+    <div class="map display"></div>
+    <div class="triggers row">
+        <div class="item col"><span class="figure">116</span> <span class="description"><strong>Locations</strong><br>covered</span></div>
+        <div class="item col"><span class="figure">88</span> <span class="description"><strong>Satisfied</strong><br>clients</span></div>
+        <div class="item col">
+            <p><span class="figure">100</span>%</p><span class="description"><strong>Professional</strong><br>approach</span></div>
+    </div>
+</div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="page-name">
+    <div class="container">
+       <h3 class="heading">track shipment</h3>
+    </div>
+ </div>
+ </div>
+ <div class="content contacts">
+    <div class="row">
+       <div class="container">
+          <div class="row">
+             <div class="col-5 left column">
+               <form id="contacts" action="{% url 'track' %}">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="form-group"><label for="tracking_number">Tracking Number</label><textarea class="form-control" id="message" rows="3" name="tracking_number" placeholder="Enter Tracking Number Here..." required></textarea></div>
+                     </div>
+                  </div>
+                  <button class="btn small" type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>Send</button>
+               </form>
+               <!-- <div class="bg"></div> -->
+             </div>
+             <div class="col-7 right column">
+
+               
+               
+               {% if shipment %}
+               <div class="row">
+                  <div class="col-6">
+                     <h4 class="heading">Sender Details</h4>
+                     <ul class="menu-regular">
+                        <li class=""></li>
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i> <strong>Name:</strong> {{ shipment.sender_name }}</li>
+                        <li class=""></li>
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i> <strong>Address:</strong> {{ shipment.sender_address }}</li>
+                        <li class=""></li>
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i> <strong>City:</strong> {{ shipment.sender_city }}</li>
+                        <li class=""></li>
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i> <strong>State:</strong> {{ shipment.sender_state }}</li>
+                        <li class=""></li>
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i> <strong>Country:</strong> {{ shipment.sender_country }}</li>
+                    </ul>
+                  </div>
+                  <div class="col-6">
+                     <h4 class="heading">Receiver Details</h4>
+                     <ul class="menu-regular">
+                        <li class=""></li>
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i> <strong>Name:</strong> {{ shipment.receiver_name }}</li>
+                        <li class=""></li>
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i> <strong>Address:</strong> {{ shipment.receiver_address }}</li>
+                        <li class=""></li>
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i> <strong>City:</strong> {{ shipment.receiver_city }}</li>
+                        <li class=""></li>
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i> <strong>State:</strong> {{ shipment.receiver_state }}</li>
+                        <li class=""></li>
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i> <strong>Country:</strong> {{ shipment.receiver_country }}</li>
+                    </ul>
+                  </div>
+               </div>
+               
+                  
+               <div class="pt-5 col-12">
+                  <h4 class="heading">Shipment Status</h4>
+                     <ul class="menu-regular">
+                        {% for shipment_status in shipment_statuses %}
+                           <li class=""></li>
+                           <i class="fa fa-angle-double-right" aria-hidden="true"></i> <strong>Current Location:</strong> {{ shipment_status.current_location.name }}</li>
+                           <li class=""></li>
+                           <i class="fa fa-angle-double-right" aria-hidden="true"></i> <strong>Arrival Time:</strong> {{ shipment_status.arrived_at }}</li>
+                           <li class=""></li>
+                           <i class="fa fa-angle-double-right" aria-hidden="true"></i> <strong>Arrival Status:</strong> {{ shipment_status.arrival_status }}</li>
+                           <hr>
+                        {% endfor %}
+                    </ul>
+               </div>
+
+               {% endif %}
+               
+
+             </div>
+             
+          </div>
+       </div>
+    </div>
+ </div>
+{% endblock content %}
