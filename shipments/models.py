@@ -15,12 +15,16 @@ class Shipment(models.Model):
     receiver_state = models.CharField(
         max_length=50, verbose_name="Receiver State")
     receiver_country = CountryField()
+    receiver_email = models.EmailField(null=True)
+    receiver_phone = models.CharField(max_length=20, null=True)
     sender_name = models.CharField(max_length=50, verbose_name="Sender Name")
     sender_address = models.CharField(
         max_length=120, verbose_name="Sender Address")
     sender_city = models.CharField(max_length=50, verbose_name="Sender City")
     sender_state = models.CharField(max_length=50, verbose_name="Sender State")
     sender_country = CountryField()
+    sender_email = models.EmailField(null=True)
+    sender_phone = models.CharField(max_length=20, null=True)
 
     def __str__(self):
         return f"{self.receiver_name} - {self.tracking_number}"
