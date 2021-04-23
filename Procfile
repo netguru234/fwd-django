@@ -1,0 +1,1 @@
+web: gunicorn fwd_project.wsgi --log-file -
